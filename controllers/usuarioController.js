@@ -25,10 +25,8 @@ const usuarioController = class{
     }
    }
    static logout = (req, res) => {
-    //res.cookie('token', '',{ maxAge: -10000, httpOnly: true });
-    //res.json();
-    let passwordHash = crypto.createHash('md5').update('adminPrueba').digest('hex');
-    usuario.create({usuario: "admin", password:passwordHash})
+    res.cookie('token', '',{ maxAge: -10000, httpOnly: true });
+    res.json();
    }
 }
 module.exports = { usuarioController };

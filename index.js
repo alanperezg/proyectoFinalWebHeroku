@@ -42,6 +42,6 @@ app.get('/api/clientes', authMWController.authenticate, clienteController.get);
 app.post('/api/login', usuarioController.login);
 app.get('/api/logout', usuarioController.logout);
 app.get('*', (req, res) =>{
-    res.sendfile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 app.listen(port);
